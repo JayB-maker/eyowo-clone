@@ -1,6 +1,3 @@
-import Link from "next/link";
-import styled, { keyframes } from "styled-components";
-
 import {
   ICardProps,
   IDividerProps,
@@ -8,16 +5,21 @@ import {
   IInputProps,
   ILinkProps,
   ITextProps,
-} from "../../types/types.d";
+} from "@/types/Types.d";
+import Link from "next/link";
+import styled, { keyframes } from "styled-components";
 
 export const Main = styled.div`
   margin-top: 90px;
 `;
 
 // COLORS
-export const primaryBlue = "#0055BA";
-export const black = "#000000";
+export const primaryOrange = "#F1761B";
+export const textColor = "#6a6a6a"
+export const black = "#121212";
 export const white = "#FFFFFF";
+export const ash = "#FAFAFA";
+export const gray = "#FBECE5";
 
 export const animateOnSkew = keyframes`
   0%   { transform: skew(0deg, 0deg) top: -; }
@@ -59,9 +61,11 @@ export const Card = styled("div")<ICardProps>`
     props.duration ? `${props.duration}` : "1s"};
   position: ${(props) => (props.position ? `${props.position}` : "unset")};
   background: ${(props) => (props.bg ? `${props.bg}` : "transparent")};
-  background-image: ${(props) => (props.bgimage ? `${props.bgimage}` : "unset")};
+  background-image: ${(props) =>
+    props.bgimage ? `${props.bgimage}` : "unset"};
   background-size: ${(props) => (props.bgsize ? `${props.bgsize}` : "unset")};
-  background-position: ${(props) => (props.bgposition ? `${props.bgposition}` : "unset")};
+  background-position: ${(props) =>
+    props.bgposition ? `${props.bgposition}` : "unset"};
   color: ${(props) => props.color && `${props.color}`};
   flex-wrap: ${(props) => props.wrap && "wrap"};
   width: ${(props) => (props.width ? `${props.width}` : "unset")};
@@ -261,7 +265,7 @@ export const LinkText = styled(Link)<ILinkProps>`
   display: ${(props) => (props.display ? `${props.display}` : "block")};
   font-weight: ${(props) => (props.heavy ? "700" : "500")};
   font-weight: ${(props) => props.weight && `${props.weight}`};
-  color: ${(props) => (props.color ? `${props.color}` : primaryBlue)};
+  color: ${(props) => (props.color ? `${props.color}` : primaryOrange)};
   background-color: ${(props) => (props.bg ? `${props.bg}` : "transparent")};
   border-radius: ${(props) => (props.radius ? `${props.radius}` : "0px")};
   width: ${(props) => props.width && `${props.width}`};
@@ -288,7 +292,7 @@ export const LinkText = styled(Link)<ILinkProps>`
     color: ${(props) => props.hcolor && `${props.hcolor}`};
     background: ${(props) => props.hbg && `${props.hbg}`};
     text-decoration: ${(props) => props.hdecoration && `${props.hdecoration}`};
-    gap: ${(props) => (props.hgap && `${props.hgap}`)};
+    gap: ${(props) => props.hgap && `${props.hgap}`};
   }
 
   @media screen and (max-width: 1024px) {
@@ -327,7 +331,7 @@ export const TextField = styled("input")<IInputProps>`
   margin-top: ${(props) => (props.mtop ? `${props.mtop}` : "0px")};
   margin-bottom: ${(props) => (props.mbottom ? `${props.mbottom}` : "0px")};
   border: ${(props) => (props.size ? `${props.size}` : "1px")} solid
-    ${(props) => (props.border ? `${props.border}` : primaryBlue)};
+    ${(props) => (props.border ? `${props.border}` : primaryOrange)};
   border: ${(props) => props.noborder && "none"};
   width: ${(props) => (props.width ? `${props.width}` : "100%")};
   height: ${(props) => (props.height ? `${props.height}` : "48px")};
@@ -335,7 +339,7 @@ export const TextField = styled("input")<IInputProps>`
   outline: none;
   font-style: normal;
   line-height: 32px;
-  color: ${(props) => (props.color ? `${props.color}` : primaryBlue)};
+  color: ${(props) => (props.color ? `${props.color}` : primaryOrange)};
   padding: ${(props) => (props.padding ? `${props.padding}` : "16px 15px")};
   transition: 0.5s;
 
@@ -358,7 +362,7 @@ export const TextField = styled("input")<IInputProps>`
 `;
 
 export const InputLabel = styled.label<ITextProps>`
-  color: ${(props) => (props.color ? `${props.color}` : primaryBlue)};
+  color: ${(props) => (props.color ? `${props.color}` : primaryOrange)};
   font-size: ${(props) => (props.size ? `${props.size}` : "0px")};
   margin-left: ${(props) => (props.mleft ? `${props.mleft}` : "0px")};
   margin-right: ${(props) => (props.mright ? `${props.mright}` : "0px")};
@@ -379,7 +383,7 @@ export const TextAreaField = styled("textarea")<IInputProps>`
   box-sizing: border-box;
   resize: none;
   border-radius: 10px;
-  color: ${(props) => (props.color ? `${props.color}` : primaryBlue)};
+  color: ${(props) => (props.color ? `${props.color}` : primaryOrange)};
   font-size: ${(props) => (props.size ? `${props.size}` : "0px")};
   margin-left: ${(props) => (props.mleft ? `${props.mleft}` : "0px")};
   margin-right: ${(props) => (props.mright ? `${props.mright}` : "0px")};
@@ -402,7 +406,7 @@ export const TextAreaField = styled("textarea")<IInputProps>`
 
   transition: 0.5s;
   &:hover {
-    // border-bottom: 1px solid ${primaryBlue};
+    // border-bottom: 1px solid ${primaryOrange};
   }
 
   width: ${(props) => props.lgWidth && `${props.lgWidth}`};
@@ -482,6 +486,8 @@ export const TitleText = styled.h3<ITextProps>`
   padding: ${(props) => props.padding && `${props.padding}`};
   text-align: ${(props) => props.textalign && props.textalign};
   flex: ${(props) => props.flexratio && props.flexratio};
+  transition: ${(props) =>
+    props.transition ? `${props.transition}` : "unset"};
 
   &:hover {
     color: ${(props) => props.hovercolor && `${props.hovercolor}`};
@@ -578,9 +584,11 @@ export const MainSection = styled("section")<ICardProps>`
   background: ${(props) => props.bg && props.bg};
   //   height: 100%;
   height: ${(props) => props.height && props.height};
-  background-image: ${(props) => (props.bgimage ? `${props.bgimage}` : "unset")};
+  background-image: ${(props) =>
+    props.bgimage ? `${props.bgimage}` : "unset"};
   background-size: ${(props) => (props.bgsize ? `${props.bgsize}` : "unset")};
-  background-position: ${(props) => (props.bgposition ? `${props.bgposition}` : "unset")};
+  background-position: ${(props) =>
+    props.bgposition ? `${props.bgposition}` : "unset"};
   overflow-y: ${(props) => props.overflowy && props.overflowy};
   overflow-x: ${(props) => props.overflowx && props.overflowx};
   z-index: ${(props) => (props.index ? `${props.index}` : "unset")};
@@ -632,8 +640,8 @@ export const Circle = styled("div")<ICardProps>`
 `;
 
 export const Button = styled("button")<ICardProps>`
-position: ${(props) => (props.position ? `${props.position}` : "unset")};
-top: ${(props) => (props.top ? `${props.top}` : "unset")};
+  position: ${(props) => (props.position ? `${props.position}` : "unset")};
+  top: ${(props) => (props.top ? `${props.top}` : "unset")};
   left: ${(props) => (props.left ? `${props.left}` : "unset")};
   right: ${(props) => (props.right ? `${props.right}` : "unset")};
   bottom: ${(props) => (props.bottom ? `${props.bottom}` : "unset")};

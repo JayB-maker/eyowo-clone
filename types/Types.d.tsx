@@ -229,6 +229,7 @@ export interface ICardProps {
   
   export interface ITextProps {
     textalign?: string;
+    transition?: string;
     mleft?: string;
     mright?: string;
     mtop?: string;
