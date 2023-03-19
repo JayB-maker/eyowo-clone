@@ -107,3 +107,104 @@ export const navRightDetails = [
     ],
   },
 ];
+
+export const footerDetails = [
+  {
+    heading: "Features",
+    subhead: true,
+    subDetails: [
+      {
+        subheading: "GO",
+        menu: [
+          {
+            handle: "Spend Money",
+            path: "/",
+          },
+          {
+            handle: "Recieve Money",
+            path: "/",
+          },
+          {
+            handle: "Account",
+            path: "/",
+          },
+        ],
+      },
+      {
+        subheading: "GROW",
+        menu: [
+          {
+            handle: "Save",
+            path: "/",
+          },
+          {
+            handle: "Control",
+            path: "/",
+          },
+        ],
+      },
+      {
+        subheading: "MORE",
+        menu: [
+          {
+            handle: "Security & compliance",
+            path: "/",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    heading: "About",
+    subhead: false,
+    subDetails: [
+      {
+        subheading: "",
+        menu: [
+          {
+            handle: "About Us",
+            path: "/",
+          },
+          {
+            handle: "Xpress",
+            path: "/",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    heading: "Help",
+    subhead: false,
+    subDetails: [
+      {
+        subheading: "",
+        menu: [
+          {
+            handle: "Help Center",
+            path: "/",
+          },
+          {
+            handle: "Status Page",
+            path: "/",
+          },
+        ],
+      },
+    ],
+  },
+];
+
+export const termsDetails = [
+  {
+    handle: "Terms of Service",
+    path: "/",
+  },
+  {
+    handle: "Grievance Policy",
+    path: "/",
+  },
+  {
+    handle: "Privacy Policy",
+    path: "/",
+  },
+];

@@ -5,7 +5,7 @@ import {
   IInputProps,
   ILinkProps,
   ITextProps,
-} from "@/types/Types.d";
+} from "@/src/types/Types.d";
 import Link from "next/link";
 import styled, { keyframes } from "styled-components";
 

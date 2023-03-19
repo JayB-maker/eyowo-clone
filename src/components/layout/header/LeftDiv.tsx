@@ -1,4 +1,4 @@
-import { navLeftDetails } from "@/data";
+import { navLeftDetails } from "@/src/data";
 import {
   Card,
   gray,
