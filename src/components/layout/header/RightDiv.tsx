@@ -47,7 +47,7 @@ const RightDiv = () => {
                 {nav.menu}
               </TitleText>
               {hover === index && (
-                <Card position="absolute" top="20px" left="0">
+                <Card position="absolute" top="20px" left="0" index="100">
                   <Card
                     radius="16px"
                     padding="24px 20px"

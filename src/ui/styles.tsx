@@ -589,6 +589,7 @@ export const MainSection = styled("section")<ICardProps>`
   background-size: ${(props) => (props.bgsize ? `${props.bgsize}` : "unset")};
   background-position: ${(props) =>
     props.bgposition ? `${props.bgposition}` : "unset"};
+  overflow: ${(props) => props.overflow && props.overflow};
   overflow-y: ${(props) => props.overflowy && props.overflowy};
   overflow-x: ${(props) => props.overflowx && props.overflowx};
   z-index: ${(props) => (props.index ? `${props.index}` : "unset")};
@@ -671,6 +672,7 @@ export const Button = styled("button")<ICardProps>`
   &:hover {
     // opacity: 0.7;
     gap: ${(props) => props.hgap && `${props.hgap}`};
+    background: ${(props) => props.hoverbg && `${props.hoverbg}`};
   }
 
   @media screen and (max-width: 1024px) {

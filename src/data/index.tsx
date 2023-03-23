@@ -208,3 +208,35 @@ export const termsDetails = [
     path: "/",
   },
 ];
+
+export const changingTextInformation = [
+  {
+    text: "Spend",
+    color: "#f2761b",
+  },
+  {
+    text: "Recieve",
+    color: "#f17076",
+  },
+  {
+    text: "Transfer",
+    color: "#2b70de",
+  },
+  {
+    text: "Pay",
+    color: "#f2761b",
+  },
+  {
+    text: "Grow",
+    color: "#5059d4",
+  },
+  {
+    text: "Save",
+    color: "#f17076",
+  },
+  {
+    text: "Control",
+    color: "#46c348",
+  },
+];
+

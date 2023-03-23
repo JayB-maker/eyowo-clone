@@ -5,7 +5,7 @@ import TermsOfServices from "./TermsOfServices"
 
 const Footer = () => {
   return (
-    <MainSection width="100%">
+    <MainSection width="100%" padding="120px 0 64px">
       <InnerSection>
         <Card flex flexdirection="column" gap="64px">
           <MainFooter />
